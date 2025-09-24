@@ -1,0 +1,6 @@
+@import url("/public/content/fonts/iransans/css/style.css");
+@import "tailwindcss";
+
+body {
+    font-family: IRANSans, serif;
+}
