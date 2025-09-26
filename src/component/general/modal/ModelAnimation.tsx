@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import type { Variants } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { FiX } from "react-icons/fi";
 
 interface ModalProps {
@@ -10,32 +9,35 @@ interface ModalProps {
   title: string;
 }
 
+// ۱. تعریف Variants برای انیمیشن‌ها
+// انیمیشن پس‌زمینه (سیاه)
 const backdropVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
+// انیمیشن خود مودال (حرکت از پایین و fade)
 const modalVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 30,
+    y: 30, // شروع از ۳۰ پیکسل پایین‌تر
   },
   visible: {
     opacity: 1,
-    y: 0,
+    y: 0, // حرکت به جای اصلی
     transition: {
-      type: "spring",
+      type: "spring", // افکت فنری برای حس بهتر
       damping: 25,
       stiffness: 200,
     },
   },
   exit: {
     opacity: 0,
-    y: 30,
+    y: 30, // هنگام خروج به پایین برمی‌گردد
   },
 };
 
-const Modal2 = ({ isOpen, onDismiss, children, title }: ModalProps) => {
+const ModalAnimation = ({ isOpen, onDismiss, children, title }: ModalProps) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -55,6 +57,7 @@ const Modal2 = ({ isOpen, onDismiss, children, title }: ModalProps) => {
           aria-modal="true"
           className="fixed inset-0 z-50 flex items-center justify-center"
         >
+          {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             variants={backdropVariants}
@@ -64,6 +67,7 @@ const Modal2 = ({ isOpen, onDismiss, children, title }: ModalProps) => {
             onClick={onDismiss}
           />
 
+          {/* Modal Panel */}
           <motion.div
             dir="rtl"
             className="relative mx-4 w-full max-w-lg rounded-2xl bg-[var(--card)] shadow-xl flex flex-col max-h-[90vh]"
@@ -98,4 +102,4 @@ const Modal2 = ({ isOpen, onDismiss, children, title }: ModalProps) => {
   );
 };
 
-export default Modal2;
+export default ModalAnimation;

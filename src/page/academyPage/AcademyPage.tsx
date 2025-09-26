@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import { CameraIcon } from "@heroicons/react/24/solid";
 
-import AcademySlider from "./AcademySlider";
-import GalleryModal from "./GalleryModal";
-import LazyImage from "./LazyImage";
-import academyData from "./academyData.json";
-import LocationSection from "./LocationSection";
-import FeatureIcon from "./FeatureIcon";
-import StickySidebar from "./StickySidebar";
-import artCategories from "./artCategories.json";
+import AcademySlider from "../../component/page/academyPage/AcademySlider";
+import GalleryModal from "../../component/page/academyPage/GalleryModal";
+import LazyImage from "../../component/page/academyPage/LazyImage";
+import academyData from "../../data/academyData.json";
+import LocationSection from "../../component/page/academyPage/LocationSection";
+import FeatureIcon from "../../component/page/academyPage/FeatureIcon";
+import StickySidebar from "../../component/page/academyPage/StickySidebar";
+import artCategories from "../../data/artCategories.json";
 import { HeartIcon, ShareIcon, StarIcon } from "lucide-react";
-import InstructorsSection from "./InstructorsSection";
-import TestimonialsSection from "./TestimonialsSection";
-import FaqSection from "./FaqSection";
-import { LOCATION_ICON, TEACHER_ICON } from "./icons";
-import SectionWrapper from "./SectionWrapper";
+import InstructorsSection from "../../component/page/academyPage/InstructorsSection";
+import TestimonialsSection from "../../component/page/academyPage/TestimonialsSection";
+import FaqSection from "../../component/page/academyPage/FaqSection";
+import {
+  LOCATION_ICON,
+  TEACHER_ICON,
+} from "../../component/page/academyPage/icons";
+import SectionWrapper from "../../component/page/academyPage/SectionWrapper";
 
 const AcademyPage: React.FC = () => {
   const [initialImageIndex, setInitialImageIndex] = useState<number | null>(

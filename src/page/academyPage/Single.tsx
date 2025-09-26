@@ -1,7 +1,3 @@
-import React from "react";
-import AcademySlider from "./AcademySlider";
-import academyData from "./academyData.json";
-import AcademyDetailsPage from "./AcademyDetailsPage";
 import AcademyPage from "./AcademyPage";
 
 function Single() {

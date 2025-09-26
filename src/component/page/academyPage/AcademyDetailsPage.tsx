@@ -1,7 +1,7 @@
 import React from "react";
 import AcademySlider from "./AcademySlider";
 import FeatureIcon from "./FeatureIcon"; // ایمپورت FeatureIcon
-import academyData from "./academyData.json"; // ایمپورت داده‌ها
+import academyData from "../../../data/academyData.json"; // ایمپورت داده‌ها
 
 import { StarIcon } from "@heroicons/react/24/solid";
 
