@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import ReactDOM from "react-dom"; // ✅ 1. ایمپورت کردن ReactDOM
+import { motion, AnimatePresence } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { FiX } from "react-icons/fi";
 
 interface ModalProps {
@@ -9,32 +11,20 @@ interface ModalProps {
   title: string;
 }
 
-// ۱. تعریف Variants برای انیمیشن‌ها
-// انیمیشن پس‌زمینه (سیاه)
+// Variants بدون تغییر باقی می‌مانند
 const backdropVariants: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1 },
 };
 
-// انیمیشن خود مودال (حرکت از پایین و fade)
 const modalVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 30, // شروع از ۳۰ پیکسل پایین‌تر
-  },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
-    y: 0, // حرکت به جای اصلی
-    transition: {
-      type: "spring", // افکت فنری برای حس بهتر
-      damping: 25,
-      stiffness: 200,
-    },
+    y: 0,
+    transition: { type: "spring", damping: 25, stiffness: 200 },
   },
-  exit: {
-    opacity: 0,
-    y: 30, // هنگام خروج به پایین برمی‌گردد
-  },
+  exit: { opacity: 0, y: 30 },
 };
 
 const ModalAnimation = ({ isOpen, onDismiss, children, title }: ModalProps) => {
@@ -49,7 +39,8 @@ const ModalAnimation = ({ isOpen, onDismiss, children, title }: ModalProps) => {
     };
   }, [isOpen]);
 
-  return (
+  // ✅ 2. تمام محتوای JSX را داخل یک متغیر قرار می‌دهیم
+  const modalContent = (
     <AnimatePresence>
       {isOpen && (
         <div
@@ -70,7 +61,7 @@ const ModalAnimation = ({ isOpen, onDismiss, children, title }: ModalProps) => {
           {/* Modal Panel */}
           <motion.div
             dir="rtl"
-            className="relative mx-4 w-full max-w-lg rounded-2xl bg-[var(--card)] shadow-xl flex flex-col max-h-[90vh]"
+            className="relative mx-4 w-full bg-white max-w-lg rounded-2xl shadow-xl flex flex-col max-h-[90vh]"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
@@ -99,6 +90,12 @@ const ModalAnimation = ({ isOpen, onDismiss, children, title }: ModalProps) => {
         </div>
       )}
     </AnimatePresence>
+  );
+
+  // ✅ 3. محتوا را با استفاده از پورتال به #modal-root منتقل می‌کنیم
+  return ReactDOM.createPortal(
+    modalContent,
+    document.getElementById("modal-root")!
   );
 };
 
