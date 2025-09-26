@@ -13,7 +13,7 @@ const MdFooter = () => {
     <>
       <footer className=" relative bottom-0 w-full">
         <p className="text-primary-foreground dark:text-primary-foreground bg-[#015945] mx-auto py-4 text-center">
-          تمامی حقوق این وبسایت متعلق به شرکت <span className="text-bold text-primary-foreground text-center text-sm md:text-base dark:text-primary-foreground">بیمه یار</span> می باشد.
+          تمامی حقوق این وبسایت متعلق به شرکت <span className="text-bold text-primary-foreground text-center text-sm md:text-base dark:text-primary-foreground">راه هنر</span> می باشد.
         </p>
       </footer>
     </>

@@ -4,3 +4,62 @@
 body {
     font-family: IRANSans, serif;
 }
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-input: var(--input);
+    --color-input-foreground: var(--input-foreground);
+    --color-card: var(--card);
+    --color-hover: var(--hover);
+    --color-card-foreground: var(--card-foreground);
+    --color-muted: var(--muted);
+    --color-footerBack: var(--footerBack);
+    --animate-infinite-slider: infiniteSlider 20s linear infinite;
+
+    @keyframes infiniteSlider {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(50%);
+        }
+    }
+}
+
+:root {
+    --primary: #832a04;
+    --primary-foreground: white;
+    --secondary: #832a04;
+    --secondary-foreground: white;
+    --input: #fefefe;
+    --input-foreground: #222;
+    --hover: #e8e8e8;
+    --card: white;
+    --card-foreground: #202020;
+    --background: #f3f3f3;
+    --foreground: black;
+    --chatBotColor: #d5ffed;
+    --muted: #494c57;
+    --footerBack: white;
+}
+.dark {
+    --primary: #832a04;
+    --primary-foreground: white;
+    --secondary: #832a04;
+    --secondary-foreground: white;
+    --input: #202020;
+    --input-foreground: #fefefe;
+    --card: #272727;
+    --hover: #272727;
+    --card-foreground: white;
+    --background: #1e1e1e;
+    --foreground: white;
+    --muted: #494c57;
+    --chatBotColor: #015945;
+    --textColor: #cafbe2;
+    --footerBack: white;
+}
