@@ -60,7 +60,7 @@ const AcademyPage: React.FC = () => {
   return (
     <>
       <div dir="rtl" className="min-h-screen bg-custompattern p-4 md:p-8">
-        <main className="max-w-6xl mx-auto">
+        <main className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 relative gap-1 md:h-[300px] rounded-2xl mb-4 shadow-lg overflow-hidden">
             <div className="w-full h-full lg:col-span-3">
               <AcademySlider images={sliderImages} />
@@ -92,7 +92,7 @@ const AcademyPage: React.FC = () => {
 
           <div className="flex p-1 md:py-10 md:px-1 rounded-2xl">
             <div className="">
-              <div className="flex flex-col lg:flex-row gap-x-2.5">
+              <div className="flex flex-col lg:flex-row gap-x-5">
                 <div className="grid gap-8 mb-3  min-w-0">
                   <div className="">
                     <div className="grid grid-cols-1 lg:grid-cols-4 justify-between items-center mb-3">
