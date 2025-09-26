@@ -14,7 +14,7 @@ interface Message {
 }
 
 const ChatbotBottomSheetModal = ({ onClose, open }: IProps) => {
-  const [messages, setMessages] = useState<Message[]>([{ id: 1, text: "سلام! 👋 من چت‌ بات بیمه یار هستم، هر سوالی داری بپرس.", sender: "bot" }]);
+  const [messages, setMessages] = useState<Message[]>([{ id: 1, text: "سلام! 👋 من چت‌ بات راه هنر هستم، هر سوالی داری بپرس.", sender: "bot" }]);
   const [input, setInput] = useState("");
 
   const handleSend = () => {
@@ -35,7 +35,7 @@ const ChatbotBottomSheetModal = ({ onClose, open }: IProps) => {
       <div className="flex flex-col h-[60vh]">
         {/* هدر چت‌بات */}
         <div className="flex items-center justify-between pb-3 border-b border-gray-200">
-          <h2 className="text-lg font-semibold text-primary">چت‌ بات بیمه یار</h2>
+          <h2 className="text-lg font-semibold text-primary">چت‌ بات راه هنر</h2>
           <button className="text-gray-500 hover:text-gray-700" onClick={() => onClose(false)}>
             ✕
           </button>

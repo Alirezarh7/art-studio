@@ -9,10 +9,12 @@ import {Link} from "react-router-dom";
 const CustomSidebar = () => {
 	const [isSidebarOpen, setSidebarOpen] = useState(false);
 	const data = [
-		{ href: '/', icon: '', src: '/image/logo.png', title: 'فتوگرافیک' },
-		{ href: '/', icon: '', src: '/image/logo.png', title: 'طراحی دوخت' },
-		{ href: '/', icon: '', src: '/image/logo.png', title: 'معماری' },
-		{ href: '/', icon: '', src: '/image/logo.png', title: 'گرافیک' },
+		{ href: '/', icon: '', src: '/image/karbordi.png', title: 'هنر سنتی' },
+		{ href: '/', icon: '', src: '/image/dokht.png', title: 'هنر کاربری' },
+		{ href: '/', icon: '', src: '/image/music.png', title: 'هنر موسقی' },
+		{ href: '/', icon: '', src: '/image/aks.png', title: 'هنر رسانه' },
+		{ href: '/', icon: '', src: '/image/pen.png', title: 'هنر نوشتاری' },
+		{ href: '/', icon: '', src: '/image/tajasomi.png', title: 'هنر تجسمی' },
 		{ href: '/', icon: <FaChalkboardTeacher className="text-[#832a04]" />, src: '', title: 'درباره ما' }
 	];
 	return (
