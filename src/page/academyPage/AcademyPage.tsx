@@ -87,7 +87,7 @@ const AcademyPage: React.FC = () => {
           <div className="flex p-1 md:py-10 md:px-1 rounded-2xl">
             <div className="">
               <div className="flex flex-col lg:flex-row gap-x-2.5">
-                <div className="grid gap-8 mb-3">
+                <div className="grid gap-8 mb-3  min-w-0">
                   <div className="">
                     <div className="grid grid-cols-1 lg:grid-cols-4 justify-between items-center mb-3">
                       <h1 className="text-3xl font-extrabold text-[var(--single-text-primary)] col-span-3">

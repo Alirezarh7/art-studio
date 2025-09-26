@@ -60,6 +60,17 @@ h1 {
 	font-weight: bold;
 }
 
+.scrollbar-hide {
+	/* Firefox */
+	scrollbar-width: none;
+	/* IE and Edge */
+	-ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
+}
+
 .modal-scroll::-webkit-scrollbar-thumb {
 	width: 26px;
 	border-radius: 13px;

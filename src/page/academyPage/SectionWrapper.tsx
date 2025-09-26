@@ -10,7 +10,7 @@ interface SectionWrapperProps {
 const SectionWrapper: React.FC<SectionWrapperProps> = ({
   title,
   iconSrc,
-  className,
+  className = "",
   children,
 }) => {
   return (
@@ -21,7 +21,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
           <h2 className="text-xl font-bold flex-1 text-gray-800">{title}</h2>
         </div>
       </div>
-      <div className={`p-1 md:p-4 rounded-2xl ${className}`}>
+      <div className={`p-1 md:p-4 rounded-2xl min-w-0 ${className}`}>
         <div>{children}</div>
       </div>
     </>
