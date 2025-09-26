@@ -81,7 +81,6 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
     }
   }, [activeIndex]);
 
-  // Hook برای مدیریت دکمه بازگشت مرورگر
   useEffect(() => {
     const handlePopState = () => {
       if (isOpen) {
@@ -90,13 +89,10 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
     };
 
     if (isOpen) {
-      // یک ورودی جدید به تاریخچه مرورگر اضافه می‌کنیم
       window.history.pushState({ modalOpen: true }, "");
-      // به رویداد بازگشت گوش می‌دهیم
       window.addEventListener("popstate", handlePopState);
     }
 
-    // حذف شنونده رویداد هنگام بسته شدن مودال
     return () => {
       window.removeEventListener("popstate", handlePopState);
     };
