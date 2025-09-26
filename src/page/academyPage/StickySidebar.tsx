@@ -61,7 +61,7 @@ const StickySidebar: React.FC = () => {
         1. Added `flex flex-col` to make this a vertical flex container.
         2. Added `max-h-[calc(100vh-7rem)]` to constrain the height and allow inner scrolling.
       */}
-      <div className="flex flex-col rounded-2xl py-6 px-4 border border-rose-100 bg-white shadow-rose-100 shadow-sm max-h-[calc(100vh-7rem)]">
+      <div className="flex flex-col rounded-2xl py-6 px-4 border border-[var(--single-primary-light)] bg-white shadow-[var(--single-primary-light)] shadow-sm max-h-[calc(100vh-7rem)]">
         {/* Changes:
           1. Wrapped the scrollable content in a new div.
           2. `flex-1` makes this div grow and take all available space, pushing the button down.
@@ -76,12 +76,16 @@ const StickySidebar: React.FC = () => {
               {courses.map((course, index) => (
                 <div
                   key={index}
-                  className="flex items-center p-3 rounded-lg bg-gray-50 border border-gray-200"
+                  className="flex items-center p-3 rounded-lg bg-[var(--single-background-muted)] border border-[var(--single-border)]"
                 >
                   <course.icon className="w-6 h-6 text-rose-400" />
                   <div className="mr-3">
-                    <p className="font-semibold text-gray-700">{course.name}</p>
-                    <p className="text-xs text-gray-500">{course.price}</p>
+                    <p className="font-semibold text-[var(--single-text-secondary)]">
+                      {course.name}
+                    </p>
+                    <p className="text-xs text-[var(--single-text-muted)]">
+                      {course.price}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -109,8 +113,8 @@ const StickySidebar: React.FC = () => {
         </div>
 
         {/* This button container is now a flex item that will be pushed to the bottom */}
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <button className="w-full bg-rose-500 cursor-pointer hover:bg-rose-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 hover:scale-105 shadow-md hover:shadow-lg">
+        <div className="mt-6 pt-6 border-t border-[var(--single-border)]">
+          <button className="w-full bg-[var(--single-primary)] cursor-pointer hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 hover:scale-105 shadow-md hover:shadow-lg">
             ثبت نام الان
           </button>
         </div>

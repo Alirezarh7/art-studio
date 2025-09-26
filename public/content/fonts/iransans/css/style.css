@@ -8,6 +8,43 @@ body {
 	margin: 0;
 }
 
+@theme {
+
+	--color-single-primary: var(--single-primary);
+	--color-single-primary-hover: var(--single-primary-hover);
+	--color-single-primary-light: var(--single-primary-light);
+	--color-single-primary-ultralight: var(--single-primary-ultralight);
+
+	--color-single-text-primary: var(--single-text-primary);
+	--color-single-text-secondary: var(--single-text-secondary);
+	--color-single-text-muted: var(--single-text-muted);
+	--color-single-background-muted: var(--single-background-muted);
+	--color-single-border: var(--single-border);
+}
+
+:root {
+	--single-primary: #F43F5E;
+	/* rose-500 */
+	--single-primary-hover: #E11D48;
+	/* rose-600 */
+	--single-primary-light: #FFE4E6;
+	/* rose-100 */
+	--single-primary-ultralight: #FFF1F2;
+	/* rose-50 */
+	--single-text-primary: #111827;
+	/* gray-900 */
+	--single-text-secondary: #374151;
+	/* gray-700 */
+	--single-text-muted: #6B7280;
+	/* gray-500 */
+	--single-background-muted: #F9FAFB;
+	/* gray-50 */
+	--single-border: #E5E7EB;
+	/* gray-200 */
+
+}
+
+
 h1,
 h2,
 h3,
@@ -22,7 +59,6 @@ textarea {
 h1 {
 	font-weight: bold;
 }
-
 
 .modal-scroll::-webkit-scrollbar-thumb {
 	width: 26px;

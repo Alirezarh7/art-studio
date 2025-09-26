@@ -31,13 +31,13 @@ const LocationSection: React.FC<LocationSectionProps> = ({
 
   if (!isLoaded) {
     return (
-      <div className="w-full h-96 bg-gray-200 animate-pulse rounded-2xl"></div>
+      <div className="w-full h-96 bg-[var(--single-border)] animate-pulse rounded-2xl"></div>
     );
   }
 
   return (
     <div className="p-1 md:p-1 rounded-2xl  mt-4">
-      {/* <h2 className="text-2xl font-extrabold text-gray-900 mb-6">
+      {/* <h2 className="text-2xl font-extrabold text-[var(--single-text-primary)] mb-6">
         موقعیت مکانی
       </h2> */}
       <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
@@ -67,14 +67,14 @@ const LocationSection: React.FC<LocationSectionProps> = ({
         {/* بخش اطلاعات */}
         <div className="flex flex-col lg:flex-row gap-3 justify-center lg:justify-around">
           <div className="flex items-center">
-            <MapPinIcon className="w-6 h-6 text-rose-500 ml-3 mt-1 flex-shrink-0" />
+            <MapPinIcon className="w-6 h-6 text-[var(--single-primary)] ml-3 mt-1 flex-shrink-0" />
             <div>
               <h3 className="font-bold text-gray-800">آدرس</h3>
               <p className="text-gray-600">{address}</p>
             </div>
           </div>
           <div className="flex items-center">
-            <BsTelephoneFill className="w-6 h-6 text-rose-500 ml-3 mt-1 flex-shrink-0" />
+            <BsTelephoneFill className="w-6 h-6 text-[var(--single-primary)] ml-3 mt-1 flex-shrink-0" />
             <div>
               <h3 className="font-bold text-gray-800">تلفن</h3>
               <p className="text-gray-600">{phone}</p>
@@ -85,7 +85,7 @@ const LocationSection: React.FC<LocationSectionProps> = ({
             href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow"
+            className="mt-4 inline-flex items-center justify-center w-full bg-[var(--single-primary)] hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow"
           >
             <LinkIcon className="w-5 h-5 ml-2" />
             دریافت مسیر

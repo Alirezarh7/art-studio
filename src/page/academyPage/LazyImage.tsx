@@ -31,7 +31,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
       className={`relative w-full h-full overflow-hidden rounded-lg ${className}`}
     >
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+        <div className="absolute inset-0 bg-[var(--single-border)] animate-pulse"></div>
       )}
       <img
         src={src}

@@ -27,12 +27,12 @@ const FaqSection: React.FC = () => {
         <Disclosure key={index} as="div" className="pt-2">
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full cursor-pointer justify-between rounded-lg bg-rose-50 px-4 py-3 text-left text-base font-medium text-rose-900 hover:bg-rose-100 focus:outline-none focus-visible:ring focus-visible:ring-rose-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full cursor-pointer justify-between rounded-lg bg-[var(--single-primary-ultralight)] px-4 py-3 text-left text-base font-medium text-rose-900 hover:bg-[var(--single-primary-light)] focus:outline-none focus-visible:ring focus-visible:ring-[var(--single-primary)] focus-visible:ring-opacity-75">
                 <span className="text-right">{faq.question}</span>
                 <ChevronUpIcon
                   className={`${
                     !open ? "rotate-180 transform" : ""
-                  } h-5 w-5 text-rose-500 transition-transform duration-200`}
+                  } h-5 w-5 text-[var(--single-primary)] transition-transform duration-200`}
                 />
               </Disclosure.Button>
               <Transition

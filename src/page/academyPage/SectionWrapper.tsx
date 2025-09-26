@@ -16,7 +16,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
   return (
     <>
       <div className="mt-2">
-        <div className="flex items-center gap-3 border-b-2 border-rose-100">
+        <div className="flex items-center gap-3 border-b-2 border-[var(--single-primary-light)]">
           <img src={iconSrc} className="w-14 h-14" />
           <h2 className="text-xl font-bold flex-1 text-gray-800">{title}</h2>
         </div>

@@ -24,13 +24,13 @@ const TestimonialsSection: React.FC = () => {
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className="bg-gray-50 p-6 rounded-xl border border-gray-200 flex flex-col"
+          className="bg-[var(--single-background-muted)] p-6 rounded-xl border border-[var(--single-border)] flex flex-col"
         >
           <ChatBubbleBottomCenterTextIcon className="w-8 h-8 text-rose-300 mb-4" />
-          <p className="text-gray-700 italic flex-grow">
+          <p className="text-[var(--single-text-secondary)] italic flex-grow">
             "{testimonial.quote}"
           </p>
-          <div className="mt-6 pt-4 border-t border-gray-200 flex items-center">
+          <div className="mt-6 pt-4 border-t border-[var(--single-border)] flex items-center">
             <img
               className="w-12 h-12 rounded-full object-cover"
               src={testimonial.imageUrl}
@@ -38,7 +38,9 @@ const TestimonialsSection: React.FC = () => {
             />
             <div className="mr-4">
               <p className="font-bold text-gray-800">{testimonial.name}</p>
-              <p className="text-sm text-gray-500">{testimonial.course}</p>
+              <p className="text-sm text-[var(--single-text-muted)]">
+                {testimonial.course}
+              </p>
             </div>
           </div>
         </div>

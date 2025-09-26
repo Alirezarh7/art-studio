@@ -125,11 +125,11 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
             animate="visible"
             exit="hidden"
           >
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 flex-shrink-0">
+            <div className="flex items-center justify-between p-4 border-b border-[var(--single-border)] flex-shrink-0">
               <h2 className="text-lg font-bold text-gray-800">گالری تصاویر</h2>
               <button
                 onClick={onClose}
-                className="p-2 rounded-full text-gray-500 hover:bg-gray-100 transition-colors"
+                className="p-2 rounded-full text-[var(--single-text-muted)] hover:bg-gray-100 transition-colors"
                 aria-label="بستن مودال"
               >
                 <XMarkIcon className="w-6 h-6" />
@@ -160,7 +160,7 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
                 </Swiper>
               </div>
 
-              <div className="w-full overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-rose-500 scrollbar-track-rose-100">
+              <div className="w-full overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-[var(--single-primary)] scrollbar-track-[var(--single-primary-light)]">
                 <div className="flex gap-4 my-1 px-2">
                   {images.map((image, index) => (
                     <button
@@ -169,7 +169,7 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
                       onClick={() => swiperInstance?.slideToLoop(index)}
                       className={`flex-shrink-0 w-28 h-20 rounded-lg overflow-hidden transition-all duration-200 ${
                         activeIndex === index
-                          ? "ring-2 ring-rose-500"
+                          ? "ring-2 ring-[var(--single-primary)]"
                           : "hover:opacity-80"
                       }`}
                     >

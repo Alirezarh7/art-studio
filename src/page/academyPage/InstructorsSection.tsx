@@ -28,7 +28,7 @@ const InstructorsSection: React.FC = () => {
       {instructors.map((instructor, index) => (
         <div
           key={index}
-          className="text-center border border-gray-200 rounded-lg bg-white p-2"
+          className="text-center border border-[var(--single-border)] rounded-lg bg-white p-2"
         >
           <div className="w-32 h-24 rounded-full mx-auto flex items-center justify-center">
             <UserIcon className="w-20 h-20 text-gray-300" />
@@ -37,7 +37,7 @@ const InstructorsSection: React.FC = () => {
           <h3 className="mt-4 text-lg font-bold text-gray-800">
             {instructor.name}
           </h3>
-          <p className="text-sm text-rose-500 font-semibold">
+          <p className="text-sm text-[var(--single-primary)] font-semibold">
             {instructor.specialty}
           </p>
           <p className="mt-2 text-sm text-gray-600">{instructor.bio}</p>

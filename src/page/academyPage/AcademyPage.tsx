@@ -90,19 +90,19 @@ const AcademyPage: React.FC = () => {
                 <div className="grid gap-8 mb-3">
                   <div className="">
                     <div className="grid grid-cols-1 lg:grid-cols-4 justify-between items-center mb-3">
-                      <h1 className="text-3xl font-extrabold text-gray-900 col-span-3">
+                      <h1 className="text-3xl font-extrabold text-[var(--single-text-primary)] col-span-3">
                         {name}
                       </h1>
 
                       <div className="flex justify-end items-center gap-2 lg:ml-3">
                         <button
-                          className="p-2 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 transition-colors"
+                          className="p-2 rounded-full text-[var(--single-text-muted)] hover:bg-gray-100 hover:text-gray-800 transition-colors"
                           title="اشتراک‌گذاری"
                         >
                           <ShareIcon className="w-6 h-6" />
                         </button>
                         <button
-                          className="p-2 rounded-full text-gray-500 hover:bg-gray-100 hover:text-rose-500 transition-colors"
+                          className="p-2 rounded-full text-[var(--single-text-muted)] hover:bg-gray-100 hover:text-[var(--single-primary)] transition-colors"
                           title="افزودن به علاقه‌مندی‌ها"
                         >
                           <HeartIcon className="w-6 h-6" />
@@ -110,10 +110,10 @@ const AcademyPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-start gap-x-2 lg:space-x-5 gap-y-2 mb-2 mt-3 pb-2 border-b border-gray-200">
+                    <div className="flex items-center justify-start gap-x-2 lg:space-x-5 gap-y-2 mb-2 mt-3 pb-2 border-b border-[var(--single-border)]">
                       <div className="flex gap-3  flex-wrap">
                         {currentCategory && (
-                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-[var(--single-primary-light)] text-rose-800">
                             <FeatureIcon
                               iconName={currentCategory.icon}
                               className="w-4 h-4 ml-2"
@@ -123,7 +123,7 @@ const AcademyPage: React.FC = () => {
                         )}
 
                         {(city || area) && (
-                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-700">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-[var(--single-text-secondary)]">
                             <FeatureIcon
                               iconName={"MapPinIcon"}
                               className="w-4 h-4 ml-2"
@@ -151,14 +151,14 @@ const AcademyPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <h2 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-rose-100 pb-2">
+                    <h2 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-[var(--single-primary-light)] pb-2">
                       امکانات اصلی
                     </h2>
                     <div className="flex flex-wrap gap-2 my-2">
                       {features.map((feature) => (
                         <div
                           key={feature.id}
-                          className="inline-flex border bg-gray-100 hover:bg-gray-200 transition border-gray-300 rounded-sm px-2 py-1 items-center text-gray-700 text-base"
+                          className="inline-flex border bg-gray-100 hover:bg-[var(--single-border)] transition border-gray-300 rounded-sm px-2 py-1 items-center text-[var(--single-text-secondary)] text-base"
                         >
                           <FeatureIcon
                             iconName={feature.icon}
@@ -205,8 +205,8 @@ const AcademyPage: React.FC = () => {
         </main>
       </div>
 
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white backdrop-blur-sm border-t border-gray-200 z-40">
-        <button className="w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 shadow-lg">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white backdrop-blur-sm border-t border-[var(--single-border)] z-40">
+        <button className="w-full bg-[var(--single-primary)] hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 shadow-lg">
           ثبت نام الان
         </button>
       </div>
