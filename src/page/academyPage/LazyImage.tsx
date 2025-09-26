@@ -21,7 +21,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
       if (img.complete) {
         setIsLoading(false);
       }
-    }, 1000);
+    }, 700);
 
     return () => clearTimeout(timer);
   }, [src]);
