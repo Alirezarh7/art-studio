@@ -100,37 +100,37 @@ const Footer = () => {
     const servicesData = [
         {
             id: 1,
-            src: 'image/aks.png',
+            src: '/image/aks.png',
             title: "هنر رسانه",
             navigate: "/third-party-insurance",
         },
         {
             id: 2,
-            src: 'image/dokht.png',
+            src: '/image/dokht.png',
             title: "هنر کاربری",
             navigate: "/third-party-insurance",
         },
         {
             id: 3,
-            src: 'image/karbordi.png',
+            src: '/image/karbordi.png',
             title: "هنر سنتی",
             navigate: "/third-party-insurance",
         },
         {
             id: 4,
-            src: 'image/music.png',
-            title: "هنر نوشتاری",
-            navigate: "/third-party-insurance",
-        },
-        {
-            id: 5,
-            src: 'image/pen.png',
+            src: '/image/music.png',
             title: "هنر موسیقی",
             navigate: "/third-party-insurance",
         },
         {
+            id: 5,
+            src: '/image/pen.png',
+            title: "هنر نوشتاری",
+            navigate: "/third-party-insurance",
+        },
+        {
             id: 6,
-            src: 'image/tajasomi.png',
+            src: '/image/tajasomi.png',
             title: "هنر تجسمی",
             navigate: "/third-party-insurance",
         },
@@ -147,7 +147,7 @@ const Footer = () => {
             {useWindowWidth() > 850 ? (
                 // <footer className="bg-gradient-to-r from-primary to-white bg- ">
                 //   <div className="max-w-6xl mx-auto px-6 py-6 text-center text-sm text-card-foreground">
-                //     <strong>کلیه حقوق این وب سایت محفوظ و متعلق به شرکت بیمه یار می‌باشد.</strong>
+                //     <strong>کلیه حقوق این وب سایت محفوظ و متعلق به شرکت راه هنر می‌باشد.</strong>
                 //   </div>
                 // </footer>
                 <MdFooter/>
@@ -213,7 +213,7 @@ const Footer = () => {
                                                     }}
                                                     className={" border border-card text-card-foreground bg-card text-sliderBlueColor rounded-xl flex flex-col items-center justify-center w-[90px] h-[90px] shadow-xl"}
                                                 >
-                                                    <img src={item.src} className={"mb-2"}/>
+                                                    <img src={item.src} className={"mb-2 h-12 w-12"}/>
                                                     <p className={"text-[12px]"}>{item.title}</p>
                                                 </div>
                                             ) : item.id ? (
@@ -222,7 +222,7 @@ const Footer = () => {
                                                         setIsModalOpen(false);
                                                         setSelectedTab(currentPath);
                                                     }}
-                                                    className="w-11 h-11 border border-card-foreground bg-card text-sliderBlueColor text-card-foreground rounded-full flex  items-center justify-center shadow-md mr-[8px] my-7"
+                                                    className="w-11 h-11 border border-card-foreground bg-card text-primary text-card-foreground rounded-full flex  items-center justify-center shadow-md mr-[8px] my-7"
                                                 >
                                                     {item.icon}
                                                 </div>

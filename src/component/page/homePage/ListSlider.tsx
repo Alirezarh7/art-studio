@@ -9,14 +9,12 @@ const ResumeSlider = () => {
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const data = [
-        { id: '1', src: '/image/sliderResume/pyke-aftab-slider1.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 1' },
-        { id: '2', src: '/image/sliderResume/pyke-aftab-slider2.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 2' },
-        { id: '3', src: '/image/sliderResume/pyke-aftab-slider3.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 3' },
-        { id: '4', src: '/image/sliderResume/pyke-aftab-slider4.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 4' },
-        { id: '5', src: '/image/sliderResume/pyke-aftab-slider5.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 5' },
-        { id: '6', src: '/image/sliderResume/pyke-aftab-slider6.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 6' },
-        { id: '7', src: '/image/sliderResume/pyke-aftab-slider6.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 6' },
-        { id: '8', src: '/image/sliderResume/pyke-aftab-slider6.jpg', title: 'کاری طراحی شد در هنرستان پیک آفتاب 6' }
+        { id: '1', src: '/image/slider/1.jpg', title: 'راه هنر1' },
+        { id: '2', src: '/image/slider/2.jpg', title: 'راه هنر 2' },
+        { id: '2', src: '/image/slider/3.jpg', title: 'راه هنر 3' },
+        { id: '3', src: '/image/slider/4.jpg', title: 'راه هنر 4' },
+        { id: '4', src: '/image/slider/5.jpg', title: 'راه هنر 5' },
+        { id: '5', src: '/image/slider/6.jpg', title: 'راه هنر 6' }
     ];
 
     const startAutoSlide = () => {
