@@ -79,7 +79,7 @@ const StickySidebar: React.FC = () => {
                   key={index}
                   className="flex items-center p-3 rounded-lg bg-[var(--single-background-muted)] border border-[var(--single-border)]"
                 >
-                  <course.icon className="w-6 h-6 text-rose-400" />
+                  <course.icon className="w-6 h-6 text-[var(--single-primary)]" />
                   <div className="mr-3">
                     <p className="font-semibold text-[var(--single-text-secondary)]">
                       {course.name}

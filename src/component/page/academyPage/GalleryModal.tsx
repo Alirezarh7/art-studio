@@ -9,9 +9,6 @@ import type { Swiper as SwiperCore } from "swiper";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Variants } from "framer-motion";
 
-import "swiper/css";
-import "swiper/css/navigation";
-
 interface GalleryModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -165,7 +162,9 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
                   {images.map((image, index) => (
                     <button
                       key={index}
-                      ref={(el) => (thumbnailRefs.current[index] = el)}
+                      ref={(el) => {
+                        thumbnailRefs.current[index] = el;
+                      }}
                       onClick={() => swiperInstance?.slideToLoop(index)}
                       className={`flex-shrink-0 w-28 h-20 rounded-lg overflow-hidden transition-all duration-200 ${
                         activeIndex === index

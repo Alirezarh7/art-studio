@@ -1,8 +1,8 @@
 import React from "react";
 import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
-import { MapPinIcon, LinkIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon } from "@heroicons/react/24/solid";
 import mapStyle from "../../../data/mapStyle.json";
-import { BsTelephone, BsTelephoneFill } from "react-icons/bs";
+import { BsTelephoneFill } from "react-icons/bs";
 
 interface LocationSectionProps {
   phone: string;

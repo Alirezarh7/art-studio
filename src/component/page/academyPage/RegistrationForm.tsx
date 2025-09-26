@@ -1,5 +1,3 @@
-import React from "react";
-
 const RegistrationForm = () => {
   return (
     <form className="space-y-4 z-[50] ">

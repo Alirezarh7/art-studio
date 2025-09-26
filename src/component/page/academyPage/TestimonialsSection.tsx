@@ -5,10 +5,6 @@ import { ChatBubbleBottomCenterTextIcon } from "@heroicons/react/24/solid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
 const testimonials = [
   {
     quote:
@@ -104,7 +100,7 @@ const TestimonialsSection: React.FC = () => {
         // ✅ 4. اضافه کردن onSwiper برای گرفتن رفرنس به کانتینر اسکرول
         onSwiper={(swiper) => {
           if (swiper.wrapperEl) {
-            swiperRef.current = swiper.wrapperEl;
+            (swiperRef as any).current = swiper.wrapperEl;
             updateShadowVisibility();
           }
         }}

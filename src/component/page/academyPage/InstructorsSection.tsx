@@ -3,10 +3,6 @@ import { UserIcon } from "@heroicons/react/24/solid";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
 const instructors = [
   {
     name: "استاد علی رضایی",
@@ -106,7 +102,7 @@ const InstructorsSection: React.FC = () => {
         // توجه: Swiper خودش یک div رو render می‌کنه. ما باید به اون div داخلی دسترسی پیدا کنیم
         onSwiper={(swiper) => {
           if (swiper.wrapperEl) {
-            swiperRef.current = swiper.wrapperEl;
+            (swiperRef as any).current = swiper.wrapperEl;
             // بلافاصله بعد از گرفتن رفرنس، وضعیت سایه رو آپدیت می‌کنیم
             updateShadowVisibility();
           }

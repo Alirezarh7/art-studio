@@ -6,16 +6,8 @@ import academyData from "../../../data/academyData.json"; // ایمپورت دا
 import { StarIcon } from "@heroicons/react/24/solid";
 
 const AcademyDetailsPage: React.FC = () => {
-  const {
-    name,
-    rating,
-    reviewCount,
-    city,
-    area,
-    addressDetails,
-    features,
-    images,
-  } = academyData;
+  const { name, rating, reviewCount, city, area, features, images } =
+    academyData;
 
   return (
     <div
@@ -55,7 +47,7 @@ const AcademyDetailsPage: React.FC = () => {
           </div>
 
           <div className="md:col-span-2 order-2">
-            <AcademySlider name={name} images={images} />
+            <AcademySlider images={images} />
             <div className="flex items-center bg-gray-100 p-2 rounded-md mt-2 text-[var(--single-text-secondary)] text-sm mb-2">
               <span className="text-xl text-yellow-500 ml-1">
                 <StarIcon className="w-5 h-5 inline" />
