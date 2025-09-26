@@ -1,0 +1,47 @@
+[
+  {
+    "id": "all",
+    "name": "همه دسته‌ها",
+    "icon": "Squares2X2Icon"
+  },
+  {
+    "id": "music",
+    "name": "موسیقی",
+    "icon": "MusicalNoteIcon"
+  },
+  {
+    "id": "painting",
+    "name": "نقاشی و طراحی",
+    "icon": "PaintBrushIcon"
+  },
+  {
+    "id": "theater",
+    "name": "تئاتر و بازیگری",
+    "icon": "TicketIcon"
+  },
+  {
+    "id": "photography",
+    "name": "عکاسی",
+    "icon": "CameraIcon"
+  },
+  {
+    "id": "cinema",
+    "name": "سینما",
+    "icon": "FilmIcon"
+  },
+  {
+    "id": "calligraphy",
+    "name": "خوشنویسی",
+    "icon": "PencilIcon"
+  },
+  {
+    "id": "pottery",
+    "name": "سفالگری",
+    "icon": "FireIcon"
+  },
+  {
+    "id": "fashion",
+    "name": "طراحی لباس",
+    "icon": "ScissorsIcon"
+  }
+]
