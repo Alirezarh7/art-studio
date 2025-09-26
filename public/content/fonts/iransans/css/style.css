@@ -1,13 +1,41 @@
-﻿@import url(fontiran.css); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+﻿@import url(fontiran.css);
+
+/* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
 body {
 	font-family: IRANSans, system-ui !important;
 	font-weight: 300;
 	direction: rtl;
 	margin: 0;
 }
-h1, h2, h3, h4, h5, h6,input, textarea {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
 	font-family: IRANSans, serif !important;
 }
+
 h1 {
 	font-weight: bold;
+}
+
+
+.modal-scroll::-webkit-scrollbar-thumb {
+	width: 26px;
+	border-radius: 13px;
+	background-clip: padding-box;
+	border: 3px solid #fff
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 0 10px;
+	color: #ddd !important
+}
+
+.modal-scroll::-webkit-scrollbar {
+	width: 12px
 }
