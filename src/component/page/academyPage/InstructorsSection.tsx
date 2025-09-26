@@ -74,10 +74,10 @@ const InstructorsSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full py-4 relative  cursor-grab">
+    <div className="w-full py-4 relative  cursor-grab z-0">
       {/* Shadow سمت راست (برای جهت RTL به معنی ابتدای اسکرول) */}
       {showRightShadow && (
-        <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-l from-transparent to-white z-[2]  pointer-events-none" />
+        <div className="absolute inset-y-0 left-[-1px] w-8 bg-gradient-to-l from-transparent to-white z-[2]  pointer-events-none" />
       )}
 
       {/* Shadow سمت چپ (برای جهت RTL به معنی انتهای اسکرول) */}

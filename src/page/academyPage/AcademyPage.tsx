@@ -14,10 +14,13 @@ import InstructorsSection from "../../component/page/academyPage/InstructorsSect
 import TestimonialsSection from "../../component/page/academyPage/TestimonialsSection";
 import FaqSection from "../../component/page/academyPage/FaqSection";
 import {
+  COMMENT_ICON,
+  FAQ_ICON,
   LOCATION_ICON,
   TEACHER_ICON,
 } from "../../component/page/academyPage/icons";
 import SectionWrapper from "../../component/page/academyPage/SectionWrapper";
+import SignupFlow from "../../component/page/academyPage/SignupFlow";
 
 const AcademyPage: React.FC = () => {
   const [initialImageIndex, setInitialImageIndex] = useState<number | null>(
@@ -80,7 +83,7 @@ const AcademyPage: React.FC = () => {
             </div>
             <button
               onClick={() => openModal(0)}
-              className="absolute bottom-4 left-4 flex items-center cursor-pointer bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-md transition-all duration-200 z-10"
+              className="absolute bottom-4 left-4 flex items-center cursor-pointer bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-md transition-all duration-200"
             >
               <CameraIcon className="w-5 h-5 ml-2" />
               <span>گالری تصاویر</span>
@@ -188,11 +191,11 @@ const AcademyPage: React.FC = () => {
                     />
                   </SectionWrapper>
 
-                  <SectionWrapper title="نظرات هنرجویان" iconSrc={TEACHER_ICON}>
+                  <SectionWrapper title="نظرات هنرجویان" iconSrc={COMMENT_ICON}>
                     <TestimonialsSection />
                   </SectionWrapper>
 
-                  <SectionWrapper title="سوالات متداول" iconSrc={TEACHER_ICON}>
+                  <SectionWrapper title="سوالات متداول" iconSrc={FAQ_ICON}>
                     <FaqSection />
                   </SectionWrapper>
                 </div>
@@ -209,9 +212,10 @@ const AcademyPage: React.FC = () => {
       </div>
 
       <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white backdrop-blur-sm border-t border-[var(--single-border)] z-40">
-        <button className="w-full bg-[var(--single-primary)] hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 shadow-lg">
+        {/* <button className="w-full bg-[var(--single-primary)] hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 shadow-lg">
           ثبت نام الان
-        </button>
+        </button> */}
+        <SignupFlow />
       </div>
 
       {initialImageIndex !== null && (

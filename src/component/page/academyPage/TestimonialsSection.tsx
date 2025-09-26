@@ -72,7 +72,7 @@ const TestimonialsSection: React.FC = () => {
 
   return (
     // ✅ 3. اضافه کردن کانتینر والد با کلاس relative
-    <div className="w-full py-4 relative  cursor-grab">
+    <div className="w-full py-4 relative  cursor-grab z-0">
       {/* سایه سمت راست (ابتدای اسکرول در RTL) */}
       {showRightShadow && (
         <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-l from-transparent to-white z-10 pointer-events-none" />
