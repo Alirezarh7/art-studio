@@ -14,14 +14,15 @@
   "openingHours": "شنبه تا چهارشنبه: ۱۰:۰۰ - ۲۱:۰۰ | پنجشنبه: ۱۰:۰۰ - ۱۸:۰۰",
   "description": "آموزشگاه موسیقی نوا با بیش از یک دهه تجربه، فضایی حرفه‌ای و دوستانه برای یادگیری موسیقی فراهم کرده است. ما با بهره‌گیری از اساتید برجسته کشور و امکانات به‌روز، شما را در مسیر شکوفایی استعدادهایتان همراهی می‌کنیم. دوره‌های ما شامل گیتار، پیانو، ویولن، آواز و سازهای سنتی برای تمامی سنین و سطوح می‌باشد.",
   "images": [
-    "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80",
-    "https://images.unsplash.com/photo-1520444465331-b49b4122eece?w=800&q=80",
-    "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&q=80",
-    "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80",
-    "https://images.unsplash.com/photo-1460036521480-ff49c08c2781?w=800&q=80",
-    "https://images.unsplash.com/photo-1471478331744-52c2a0a276dc?w=800&q=80",
-    "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80",
-    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80"
+    "/public/image/academy/8.jpg",
+
+    "/public/image/academy/4.jpg",
+    "/public/image/academy/1.jpg",
+    "/public/image/academy/2.jpg",
+    "/public/image/academy/3.jpg",
+    "/public/image/academy/5.jpg",
+    "/public/image/academy/6.jpg",
+    "/public/image/academy/7.jpg"
   ],
   "features": [
     { "id": "studio", "name": "استودیو ضبط مجهز", "icon": "MicrophoneIcon" },

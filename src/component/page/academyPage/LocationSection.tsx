@@ -1,9 +1,11 @@
 import React from "react";
-import { GoogleMap, useJsApiLoader, MarkerF } from "@react-google-maps/api";
 import { MapPinIcon } from "@heroicons/react/24/solid";
-import mapStyle from "../../../data/mapStyle.json";
 import { BsTelephoneFill } from "react-icons/bs";
 
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+
+// Define the component props
 interface LocationSectionProps {
   phone: string;
   address: string;
@@ -13,60 +15,36 @@ interface LocationSectionProps {
   };
 }
 
-const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-
 const LocationSection: React.FC<LocationSectionProps> = ({
   address,
   location,
   phone,
 }) => {
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: apiKey,
-  });
-
-  const mapContainerStyle = {
-    width: "100%",
-    height: "100%",
-    borderRadius: "1rem", // برای گرد کردن گوشه‌ها
-  };
-
-  if (!isLoaded) {
-    return (
-      <div className="w-full h-96 bg-[var(--single-border)] animate-pulse rounded-2xl"></div>
-    );
-  }
+  // Define the position for Leaflet map [lat, lng]
+  const position: [number, number] = [location.lat, location.lng];
 
   return (
-    <div className="p-1 md:p-1 rounded-2xl  mt-4">
-      {/* <h2 className="text-2xl font-extrabold text-[var(--single-text-primary)] mb-6">
-        موقعیت مکانی
-      </h2> */}
+    <div className="p-1 md:p-1 rounded-2xl mt-4">
       <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-        {/* بخش نقشه */}
-        <div className="md:col-span-2 h-56 rounded-2xl overflow-hidden shadow-inner">
-          <GoogleMap
-            mapContainerStyle={mapContainerStyle}
-            center={location}
-            zoom={16}
-            options={{
-              styles: mapStyle,
-              disableDefaultUI: true, // حذف کنترل‌های پیش‌فرض
-              zoomControl: true, // فقط کنترل زوم را نگه می‌داریم
-            }}
+        {/* Map Section */}
+        <div className="h-96 rounded-2xl overflow-hidden shadow-inner">
+          <MapContainer 
+            center={position} 
+            zoom={15} 
+            scrollWheelZoom={false} 
+            style={{ height: '100%', width: '100%' }}
           >
-            {/* مارکر سفارشی */}
-            <MarkerF
-              position={location}
-              icon={{
-                url: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ec4899" class="w-12 h-12"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 005.169-4.44c3.486-4.225 3.486-10.373 0-14.6-3.486-4.224-9.33-4.224-12.815 0-3.486 4.227-3.486 10.373 0 14.6 1.742 2.113 3.428 3.733 5.17 4.44zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" /></svg>`,
-                scaledSize: new window.google.maps.Size(48, 48),
-              }}
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-          </GoogleMap>
+            <Marker position={position}>
+              <Popup>{address}</Popup>
+            </Marker>
+          </MapContainer>
         </div>
 
-        {/* بخش اطلاعات */}
+        {/* Information Section */}
         <div className="flex flex-col lg:flex-row gap-3 justify-center lg:justify-around">
           <div className="flex items-center">
             <MapPinIcon className="w-6 h-6 text-[var(--single-primary)] ml-3 mt-1 flex-shrink-0" />
@@ -82,16 +60,6 @@ const LocationSection: React.FC<LocationSectionProps> = ({
               <p className="text-gray-600">{phone}</p>
             </div>
           </div>
-
-          {/* <a
-            href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center justify-center w-full bg-[var(--single-primary)] hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 shadow"
-          >
-            <LinkIcon className="w-5 h-5 ml-2" />
-            دریافت مسیر
-          </a> */}
         </div>
       </div>
     </div>
