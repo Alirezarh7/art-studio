@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { useParams } from "react-router-dom";
-import SchoolsCard from "../../../component/page/schoolsPage/schoolsCard";
+import SchoolsCard from "../../../component/page/schoolsPage/SchoolsCard.tsx";
 
 const fake_data = [
   {

@@ -32,7 +32,7 @@ const NotFoundPage = () => {
 
       <div className={'flex justify-center items-center w-full h-52'}>
         <strong className={'font-bold text-xl text-red-700 text-center '}>
-          صفحه مورد نظر یافت نشد. یا شما به این صفحه دسترسی ندارید
+          صفحه مورد نظر در حال ساخت است.
         </strong>
       </div>
     </div>

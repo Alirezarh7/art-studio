@@ -1,11 +1,11 @@
 import {useState, useEffect, useRef} from 'react';
 import {IoMdArrowDropdown} from 'react-icons/io';
 import {Link} from 'react-router-dom';
-import type {Tprofile} from "../../../types/generalType.ts";
+
 import {Info, LogOut, ShieldPlus, UserCog, Wallet} from "lucide-react";
 
 interface IProps {
-  profile: Tprofile
+  profile: any
 }
 
 const CustomDropDown = ({profile}: IProps) => {

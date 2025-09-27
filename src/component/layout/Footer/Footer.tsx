@@ -154,7 +154,7 @@ const Footer = () => {
             ) : (
                 <>
                     <div
-                        className=" fixed bottom-0 left-0 right-0 py-2 px-4 flex border border-primary bg-card justify-between items-center shadow-xl rounded-t-3xl z-30 ">
+                        className=" fixed bottom-0 left-0 right-0 py-2 px-4 flex border border-primary bg-card justify-between items-center shadow-xl rounded-t-3xl z-10  ">
                         {navItems.map((item) => (
                             <div
                                 key={item.id}
@@ -199,7 +199,7 @@ const Footer = () => {
                                 animate={{opacity: 1, y: 0}}
                                 exit={{opacity: 0, y: 50}}
                                 transition={{duration: 0.3}}
-                                className="fixed top-0 left-0 w-full h-full bg-black/90 flex flex-col items-center justify-center z-[1000001] overflow-hidden"
+                                className="fixed top-0 left-0 w-full h-full bg-black/90 flex flex-col items-center justify-center z-20 overflow-hidden"
                             >
                                 <div className={"grid grid-cols-3 w-full justify-items-center bottom-3 gap-5  fixed "}>
                                     {servicesData.map((item) => (

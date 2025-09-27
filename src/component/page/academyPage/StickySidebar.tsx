@@ -114,7 +114,7 @@ const StickySidebar: React.FC = () => {
         </div>
 
         {/* This button container is now a flex item that will be pushed to the bottom */}
-        <div className="mt-6 pt-6 border-t border-[var(--single-border)]">
+        <div className="mt-6 pt-6 border-t border-primary">
           {/* <button className="w-full bg-[var(--single-primary)] cursor-pointer hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 hover:scale-105 shadow-md hover:shadow-lg">
             ثبت نام الان
           </button> */}
