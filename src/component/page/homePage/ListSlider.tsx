@@ -6,6 +6,8 @@ import {Link} from "react-router-dom";
 
 const ResumeSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
     const data = [

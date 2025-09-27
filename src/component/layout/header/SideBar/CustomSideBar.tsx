@@ -18,32 +18,33 @@ const CustomSidebar = () => {
 		{ href: '/', icon: <FaChalkboardTeacher className="text-[#832a04]" />, src: '', title: 'درباره ما' }
 	];
 	return (
-		<div className="rtl">
+		<div className="rtl z-[9999]">
 			<LuMenu
 				className="text-[#832a04] w-11 h-11 cursor-pointer inline-flex items-center p-2"
 				onClick={() => setSidebarOpen(!isSidebarOpen)}
 			/>
 			{isSidebarOpen && (
 				<div
-					className="  fixed inset-0 bg-black/50 z-30"
+					className="  fixed inset-0 bg-black/50 "
 					onClick={() => setSidebarOpen(false)}
 				/>
 			)}
 			<div
-				className={`fixed top-0 right-0 z-40 w-72 h-screen transition-transform duration-700 transform ${
+				className={`fixed top-0 right-0 z-[99999] w-72 h-screen transition-transform duration-700 transform ${
 					isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
 				}`}
 			>
+
 				<div className="h-full px-3 py-4 bg-gray-200  ">
 					<IoIosCloseCircleOutline className=" cursor-pointer text-[#832a04] w-9 h-9 fixed left-3 top-5  "
 																	 onClick={() => setSidebarOpen(false)} />
 					<div className="w-full mt-12  flex flex-col items-center">
 						<img src="/image/logo.png" alt={'راه هنر'} height={90} width={90}
 									 className={`${isSidebarOpen ? 'rotate-animation' : ''}`} />
-						<strong
-							className="my-4 text-xl bg-gradient-to-l  from-[#d37827] via-[#c62d27] to-black inline-block text-transparent bg-clip-text">
-                            راه هنر
-						</strong>
+						{/*<strong*/}
+						{/*	className="my-4 text-xl bg-gradient-to-l  from-[#d37827] via-[#c62d27] to-black inline-block text-transparent bg-clip-text">*/}
+                        {/*    راه هنر*/}
+						{/*</strong>*/}
 						{data.map((item,index) =>
 							<Link  key={index} to={item.href} onClick={() => setSidebarOpen(false)}
 										className=" cursor-pointer hover:bg-gray-400 py-3 border-b border-gray-300 w-full grid grid-cols-5 items-center ">
@@ -63,6 +64,7 @@ const CustomSidebar = () => {
 			</div>
 		</div>
 	);
+
 };
 
 export default CustomSidebar;

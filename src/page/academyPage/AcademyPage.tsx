@@ -62,7 +62,7 @@ const AcademyPage: React.FC = () => {
       <div dir="rtl" className="min-h-screen bg-custompattern p-4 md:p-8">
         <main className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 relative gap-1 md:h-[300px] rounded-2xl mb-4 shadow-lg overflow-hidden">
-            <div className="w-full h-full lg:col-span-3">
+            <div className="w-full h-full grid-cols-5 lg:col-span-3">
               <AcademySlider images={sliderImages} />
             </div>
 
@@ -211,7 +211,7 @@ const AcademyPage: React.FC = () => {
         </main>
       </div>
 
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-white backdrop-blur-sm border-t border-[var(--single-border)] z-40">
+      <div className="lg:hidden  bottom-10 left-0 right-0 p-4 bg-white backdrop-blur-sm border-t border-[var(--single-border)] z-10">
         {/* <button className="w-full bg-[var(--single-primary)] hover:bg-[var(--single-primary-hover)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-200 shadow-lg">
           ثبت نام الان
         </button> */}

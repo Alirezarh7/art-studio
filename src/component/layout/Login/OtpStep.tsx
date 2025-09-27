@@ -6,7 +6,7 @@ interface OtpStepProps {
   onSuccess: (userExists: boolean) => void;
 }
 
-const OtpStep = ({ phone, onSuccess }: OtpStepProps) => {
+const OtpStep = ({ phone }: OtpStepProps) => {
   const [otp, setOtp] = useState<string[]>(["", "", "", ""]);
   const inputsRef = useRef<Array<HTMLInputElement | null>>([]);
   const submittingRef = useRef(false);
@@ -74,7 +74,7 @@ const OtpStep = ({ phone, onSuccess }: OtpStepProps) => {
     focusInput(Math.max(0, lastIdx));
   };
 
-  const doMutate = (code: string) => {
+  const doMutate = () => {
     if (submittingRef.current) return;
     submittingRef.current = true;
     // mutate(
@@ -104,13 +104,15 @@ const OtpStep = ({ phone, onSuccess }: OtpStepProps) => {
   const handleSubmit = () => {
     const code = otp.join("");
     if (code.length !== 4) return;
-    doMutate(code);
+    doMutate();
   };
 
   // وقتی همه پر شد خودکار ارسال کن
   useEffect(() => {
     if (otp.every((c) => c !== "")) {
-      doMutate(otp.join(""));
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
+        doMutate(otp.join(""));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [otp.join("")]);

@@ -6,7 +6,7 @@ interface RegisterStepProps {
   onComplete: () => void;
 }
 
-const RegisterStep = ({ phone, onComplete }: RegisterStepProps) => {
+const RegisterStep = ({  onComplete }: RegisterStepProps) => {
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",

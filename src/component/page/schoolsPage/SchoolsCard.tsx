@@ -1,7 +1,7 @@
 import { StarIcon } from "lucide-react";
 import type { FC } from "react";
 import { FaInstagram, FaLinkedin, FaTelegram, FaYoutube } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 interface PropsType {
   id: number;
@@ -34,8 +34,9 @@ interface PropsType {
 }
 
 const SchoolsCard: FC<PropsType> = ({ name, disciplines, address, city, phone, website, image, description, rating, price_range, opening_hours, social }) => {
-  return (
-    <li className="w-full p-5 bg-gray-100 rounded-2xl shadow-lg">
+    const navigate = useNavigate()
+    return (
+    <li className="w-full p-5 bg-gray-100 rounded-2xl shadow-lg cursor-pointer  " onClick={()=>navigate('/academy')} >
       <div className="flex flex-col items-center md:justify-between gap-5 md:flex-row w-full">
         <img src={image} alt="school" className="max-h-80 w-full md:w-1/3 rounded-2xl object-contain object-center" />
         <div className="flex flex-col items-start justify-between h-full gap-5 md:flex-1">

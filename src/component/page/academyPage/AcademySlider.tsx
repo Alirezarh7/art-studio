@@ -21,10 +21,10 @@ const AcademySlider: React.FC<AcademySliderProps> = ({ images }) => {
         }}
         className="w-full h-full"
       >
-        {images.map((src, index) => (
+        {images.map((_src:string, index) => (
           <SwiperSlide key={index} className="relative">
             <img
-              src={src}
+              src={'/image/slider/5.jpg'}
               alt={`Slider image ${index + 1}`}
               className="w-full h-full object-cover"
             />
